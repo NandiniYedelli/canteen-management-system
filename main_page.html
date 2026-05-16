@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Canteen</title>
+    <link rel="stylesheet" href="nandu.css">
+</head>
+<body>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <img src="/api/placeholder/100/50" alt="V Canteen Logo" class="logo">
+                <h1>V Canteen</h1>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="#" class="menu-item">Home</a></li>
+                <li><a href="#" class="menu-item">Menu</a></li>
+                <li><a href="#" class="menu-item">Today's Special</a></li>
+                <li><a href="#" class="menu-item">Offers</a></li>
+                <li><a href="#" class="menu-item">Feedback</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <div class="search-container">
+                    <input type="text" placeholder="Search food..." class="search-input">
+                    <button class="search-button"><i class="ri-search-line"></i></button>
+                </div>
+                <div class="user-menu">
+                    <div class="user-icon" id="user-dropdown-trigger">
+                        <i class="ri-user-3-line"></i>
+                    </div>
+                    <div class="user-dropdown" id="user-dropdown">
+                        <a href="#" class="dropdown-item">
+                            <i class="ri-user-line"></i> Profile
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="ri-settings-4-line"></i> Settings
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <i class="ri-theme-line"></i> Theme
+                        </a>
+                        <a href="#" class="dropdown-item logout">
+                            <i class="ri-logout-box-r-line"></i> Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="about hidden">
+            <div class="about-image hidden">
+                <img src="canteenpic.jpg" alt="Canteen Image">
+            </div>
+            <div class="about-text hidden">
+                <h1>About VIT Canteen</h1>
+                <p>The VIT College Canteen serves as a vital space for students and faculty, offering a variety of fresh, hygienic, and budget-friendly meals. Managed by the college administration, it maintains high standards of cleanliness and food safety through regular inspections. The canteen provides a diverse menu, including South Indian, North Indian, snacks, and beverages, catering to different tastes. With a well-trained staff ensuring efficient service, it creates a comfortable and friendly environment for students to relax, socialize, and enjoy quality food.</p>
+            </div>
+        </section>
+
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-category="breakfast">Breakfast</button>
+                <button class="tab-btn" data-category="lunch">Lunch</button>
+                <button class="tab-btn" data-category="snacks">Snacks</button>
+                <button class="tab-btn" data-category="beverages">Beverages</button>
+            </div>
+            
+            <div class="menu-items">
+                <div class="menu-category active" id="breakfast">
+                    <div class="menu-item">
+                        <div class="item-img">
+                            <img src=eggsandwich.jpg alt="Egg Sandwich">
+                        </div>
+                        <div class="item-info">
+                            <h3>Egg Sandwich</h3>
+                            <p>Fresh eggs with whole-grain bread and veggies</p>
+                            <span class="price">$2.50</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-img">
+                            <img src=vegan-oatmeal-recipe-FI.jpg alt="Oatmeal">
+                        </div>
+                        <div class="item-info">
+                            <h3>Oatmeal</h3>
+                            <p>Creamy oatmeal with choice of toppings</p>
+                            <span class="price">$1.75</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-img">
+                            <img src=panckakes.jpg alt="Pancakes">
+                        </div>
+                        <div class="item-info">
+                            <h3>Pancakes</h3>
+                            <p>Fluffy pancakes with maple syrup</p>
+                            <span class="price">$3.00</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-category" id="lunch">
+                    <div class="menu-item">
+                        <div class="item-img">
+                            <img src=teriyaki-chicken-rice-bowls-photo.jpg alt="Chicken Rice Bowl">
+                        </div>
+                        <div class="item-info">
+                            <h3>Chicken Rice Bowl</h3>
+                            <p>Grilled chicken with rice and vegetables</p>
+                            <span class="price">$4.50</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-img">
+                            <img src=pasta.jpg alt="Pasta">
+                        </div>
+                        <div class="item-info">
+                            <h3>Pasta</h3>
+                            <p>Your choice of sauce with pasta</p>
+                            <span class="price">$3.75</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-img">
+                            <img src=wrap.jpg alt="Veggie Wrap">
+                        </div>
+                        <div class="item-info">
+                            <h3>Veggie Wrap</h3>
+                            <p>Fresh vegetables wrapped in whole wheat tortilla</p>
+                            <span class="price">$3.25</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-category" id="snacks">
+                    <div class="menu-item">
+                        <div class="item-img">
+                            <img src="/api/placeholder/150/150" alt="French Fries">
+                        </div>
+                        <div class="item-info">
+                            <h3>French Fries</h3>
+                            <p>Crispy golden fries with dipping sauce</p>
+                            <span class="price">$1.50</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-img">
+                            <img src="/api/placeholder/150/150" alt="Samosa">
+                        </div>
+                        <div class="item-info">
+                            <h3>Samosa</h3>
+                            <p>Spicy potato filled pastry</p>
+                            <span class="price">$1.00</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-img">
+                            <img src="/api/placeholder/150/150" alt="Fruit Cup">
+                        </div>
+                        <div class="item-info">
+                            <h3>Fruit Cup</h3>
+                            <p>Fresh seasonal fruits</p>
+                            <span class="price">$2.00</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-category" id="beverages">
+                    <div class="menu-item">
+                        <div class="item-img">
+                            <img src="/api/placeholder/150/150" alt="Coffee">
+                        </div>
+                        <div class="item-info">
+                            <h3>Coffee</h3>
+                            <p>Freshly brewed coffee</p>
+                            <span class="price">$1.25</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-img">
+                            <img src="/api/placeholder/150/150" alt="Tea">
+                        </div>
+                        <div class="item-info">
+                            <h3>Tea</h3>
+                            <p>Various flavors available</p>
+                            <span class="price">$1.00</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-img">
+                            <img src="/api/placeholder/150/150" alt="Fruit Smoothie">
+                        </div>
+                        <div class="item-info">
+                            <h3>Fruit Smoothie</h3>
+                            <p>Blended fresh fruits with yogurt</p>
+                            <span class="price">$2.75</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="today-special" class="special-section">
+        <div class="container">
+            <h2>Today's Special</h2>
+            <div class="special-container">
+                <div class="special-card">
+                    <div class="special-img">
+                        <img src=special1_menu.jpg alt="Special Dish">
+                    </div>
+                    <div class="special-content">
+                        <h3 id="special-title">Loading...</h3>
+                        <p id="special-description">Loading...</p>
+                        <div class="special-price">
+                            <span class="original-price" id="special-original-price">$0.00</span>
+                            <span class="discount-price" id="special-discount-price">$0.00</span>
+                        </div>
+                        <p class="availability">Available: <span id="special-availability">0</span> left</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="timings" class="timings-section">
+        <div class="container">
+            <h2>Opening Hours</h2>
+            <div class="timings-container">
+                <div class="timing-card">
+                    <h3>Breakfast</h3>
+                    <p>7:30 AM - 10:30 AM</p>
+                </div>
+                <div class="timing-card">
+                    <h3>Lunch</h3>
+                    <p>11:30 AM - 2:30 PM</p>
+                </div>
+                <div class="timing-card">
+                    <h3>Snacks</h3>
+                    <p>3:00 PM - 6:00 PM</p>
+                </div>
+                <div class="timing-card">
+                    <h3>Dinner</h3>
+                    <p>7:00 PM - 9:30 PM</p>
+                </div>
+            </div>
+            <div class="current-status">
+                <p>Current Status: <span id="open-status">Checking...</span></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h3>Location</h3>
+                        <p>Main Building, Ground Floor</p>
+                        <p>College Campus</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Phone</h3>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Email</h3>
+                        <p>canteen@college.edu</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="feedbackForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message/Feedback</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                    <div id="formSuccess" class="form-success">
+                        Thank you for your feedback!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Campus Bites</h2>
+                    <p>Fueling Your Education</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#today-special">Today's Special</a></li>
+                        <li><a href="#timings">Timings</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">FB</a>
+                        <a href="#" class="social-icon">IG</a>
+                        <a href="#" class="social-icon">TW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Campus Bites. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="lav.js"></script>
+</body>
+</html>

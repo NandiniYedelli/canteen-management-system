@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'winky sans', sans-serif;
+}
+
+body {
+    background-color: #f9f5f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar Styles with Glowing Effect */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: rgba(255, 255, 255, 0.2); /* Transparent effect */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width:100%;
+    z-index: 1000;
+    transition: all 0.5s ease-in-out;
+}
+
+.navbar:hover {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 0px 20px rgba(19, 47, 59, 0.8);
+}
+
+/* Logo */
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #d35400;
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    margin-right: 10px;
+    font-size: 32px;
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #6b80db;
+    text-shadow: 0px 0px 10px rgba(100, 220, 250, 0.8);
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #62bfeb;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+    width: 100%;
+}
+
+/* Navbar Right Section */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #a6e8ec;
+    border-radius: 30px;
+    padding: 8px 15px;
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 5px;
+    width: 150px;
+}
+
+.search-box button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #131529;
+}
+
+/* Glowing Effect on Icons */
+.search-box button i,
+.profile i,
+.menu-toggle i {
+    color:#292192;
+    transition: all 0.3s ease;
+}
+
+.search-box button i:hover,
+.profile i:hover,
+.menu-toggle i:hover {
+    color: #0c1129;
+    text-shadow: 0px 0px 10px rgba(0, 49, 211, 0.8);
+}
+
+/* Profile Icon */
+.profile {
+    font-size: 28px;
+    color: #24ceec;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.profile:hover {
+    color: #e4e8ec;
+    transform: scale(1.1);
+}
+
+/* Profile Section */
+.profile {
+    position: relative;
+    font-size: 28px;
+    color: #0b0d0e;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.profile:hover {
+    color: #0062d3;
+    transform: scale(1.1);
+}
+
+/* Profile Dropdown */
+.profile-dropdown {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.3); /* Increased transparency */
+    backdrop-filter: blur(20px) saturate(200%); /* More blur and saturation */
+    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Light border for depth */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    width: 180px;
+    display: none;
+    flex-direction: column;
+    padding: 12px 0;
+    text-align: left;
+    transform: translateY(-10px);
+
+    transition: all 0.3s ease-in-out;
+}
+
+.profile-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-dropdown ul li {
+    border-bottom: 1px solid #ddd;
+}
+
+.profile-dropdown ul li:last-child {
+    border-bottom: none;
+}
+
+.profile-dropdown ul li a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.profile-dropdown ul li a:hover {
+    background: #f3f3f3;
+    color: #0073e6;
+}
+
+/* Show dropdown on hover */
+.profile:hover .profile-dropdown {
+    display: block;
+}
+.profile-dropdown.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Menu Toggle (for Mobile) */
+.menu-toggle {
+    font-size: 28px;
+    color: #2b2c5a;
+    cursor: pointer;
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 40px;
+        gap: 30px;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .search-box input {
+        width: 120px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .logo i {
+        font-size: 28px;
+    }
+
+    .search-box {
+        padding: 5px 10px;
+    }
+
+    .search-box input {
+        width: 100px;
+    }
+}
+
+/* About Section */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 5%;
+    gap: 50px;
+    background-image: url("https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb29.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.about-text h1 {
+    font-size: 2.5rem;
+    color: #00ccd3;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Social Media Section */
+.social-section {
+    text-align: center;
+    padding: 60px 5%;
+    background-color: #fff;
+}
+
+.social-section h2 {
+    font-size: 2rem;
+    color: #00a2d3;
+    margin-bottom: 15px;
+}
+
+.social-section p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-icons a {
+    color: #5a3d2b;
+    font-size: 2rem;
+    transition: all 0.3s;
+}
+
+.social-icons a:hover {
+    color: #0097d3;
+    transform: translateY(-5px);
+}
+
+/* Scroll Animation */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s;
+}
+
+.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design for About Section */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        padding: 60px 5%;
+    }
+
+    .about-image {
+        margin-bottom: 30px;
+        max-width: 100%;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+
+    .social-icons {
+        gap: 20px;
+    }
+
+    .social-icons a {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-text {
+        padding: 30px 20px;
+    }
+
+    .about-text h1 {
+        font-size: 2rem;
+    }
+
+    .social-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+    .social-icons a {
+        font-size: 1.5rem;
+    }
+}
