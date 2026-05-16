@@ -1,0 +1,51 @@
+# 🍽️ Canteen Management System
+
+A simple and responsive web-based Canteen Management System developed using HTML, CSS, JavaScript, and Python.  
+This project helps users browse food items, explore menus, and navigate different sections of the canteen website easily.
+
+---
+
+## 📌 Features
+
+- 🏠 Home Page
+- 📋 Interactive Menu Section
+- 🍜 Food Item Display
+- 🔐 Login Functionality
+- 📱 Responsive Design
+- 🎨 Attractive UI using CSS
+- ⚡ Dynamic Interactions with JavaScript
+
+---
+
+## 🛠️ Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- Python
+
+---
+
+## 📂 Project Structure
+
+```text
+CANTEEN_MANAGEMENT_SYSTEM/
+│
+├── home_page.html
+├── main_page.html
+├── canteen.html
+├── nav.html
+├── login.py
+│
+├── style.css
+├── about.css
+├── nandu.css
+├── nandini.css
+│
+├── script.js
+├── about.js
+├── lav.js
+├── nan_js.js
+│
+├── images/
+└── README.md
